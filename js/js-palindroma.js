@@ -9,14 +9,12 @@ function palindroma(parola) {
     let parolaLength = parola.length
     let result
 
-    for(let i = 0; i < parolaLength; i++) {
-        if (parola[i] === parola[(parolaLength - 1) - i]) {
-            result = true
-        } else {
-            result = false
+    for(let i = 0; i < Math.floor(parolaLength /2); i++) {
+        if (parola[i] !== parola[(parolaLength - 1) - i]) {
+            return false
         }
+        return true
     }
-    return result
 }
 
 let verificaPalindroma = palindroma(userParolaNeutra)
